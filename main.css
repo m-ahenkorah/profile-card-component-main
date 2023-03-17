@@ -1,0 +1,204 @@
+:root {
+    --clrprimary-darkcyan: hsl(185, 75%, 39%);
+    --clrprimary-verydarkdesaturatedblue: hsl(229, 23%, 23%);
+    --clrprimary-darkgrayishblue: hsl(227, 10%, 46%);
+
+    --clrneutral-darkgray: hsl(0, 0%, 59%);
+
+    --ff: 'Kumbh Sans', sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    /* 
+    - Mobile: 375px
+    - Desktop: 1440px
+    - Font size (name and stats): 18px
+    */
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--clrprimary-darkcyan);
+    background-image: url(images/bg-pattern-top.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 250px left -250px;
+    /* background-image: url(images/bg-pattern-bottom.svg); */
+    /* min-height: 100vh; */
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+/* Profile body */
+
+.profile-body {
+    /* background-color: var(--clrprimary-darkcyan);
+    background-image: url(images/bg-pattern-top.svg);
+    background-image: url(images/bg-pattern-bottom.svg); */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.profile-card {
+    /* border: 1px solid black; */
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white;
+    font-family: var(--ff);
+    /* font-size: ; */
+    min-width: 40vh;
+}
+
+.top-section {
+    background-image: url(images/bg-pattern-card.svg);
+    width: 100%;
+    height: 120px;
+    /* border-bottom: 1px solid brown; */
+    /* margin-bottom: 5px; */
+}
+
+.mid-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.mid-section-image {
+    border: 5px solid white;
+    border-radius: 50%;
+    margin-top: -50px;
+    margin-bottom: 10px;
+
+}
+
+.mid-section-image img {
+    border-radius: 50%;
+    /* border: 3px solid blue; */
+}
+
+.mid-section .name {
+    color: var(--clrprimary-verydarkdesaturatedblue);
+    font-weight: var(--fw-bold);
+}
+
+.mid-section .name .age {
+    color: var(--clrneutral-darkgray);
+    font-weight: var(--fw-regular);
+}
+
+.mid-section .city {
+    color: var(--clrneutral-darkgray);
+    font-weight: var(--fw-regular);
+}
+
+
+/* bottom section */
+
+hr {
+    opacity: 0.3;
+}
+
+.bottom-section{
+    /* border-top: .1px solid var(--clrneutral-darkgray); */
+    display: flex;
+    /* padding: 20px; */
+    align-items: center;
+    justify-content: center;
+}
+.bottom-section p {
+    color: var(--clrprimary-verydarkdesaturatedblue);
+    font-weight: var(--fw-bold);
+    margin: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.bottom-section p span{
+    color: var(--clrneutral-darkgray);
+    font-weight: var(--fw-regular);
+    display: block;
+    font-size: 10px;
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+   }
+  .attribution a { 
+    color: hsl(228, 45%, 44%); 
+  }
+
+
+@media (max-width: 375px) {
+    body {
+        background-image: url(images/bg-pattern-top.svg);
+        background-repeat: no-repeat;
+        background-position: left 0 bottom 250px;
+      }
+
+      .profile-body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .profile-card {
+        border-radius: 15px;
+        overflow: hidden;
+        min-width: 40vh;
+    }
+    
+}
